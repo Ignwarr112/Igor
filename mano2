@@ -1,0 +1,1260 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "from time import sleep\n",
+    "import matplotlib.pyplot as plt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = True\n",
+    "b = False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(a and b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(a or b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(not a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ListA = [1, 2, [5,10,15]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ListA[2][2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if 5>6:\n",
+    "    print(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = -5\n",
+    "if x < 0:\n",
+    "    x = 0\n",
+    "    print(\"Negative changed to zero\")\n",
+    "elif x == 0:\n",
+    "    print(\"Zero\")\n",
+    "elif x ==1:\n",
+    "    print(\"Single\")\n",
+    "else:\n",
+    "    print(\"More\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def convert_to_SI(value, type=\"temp\"):\n",
+    "    if type == \"temp\":\n",
+    "        celsius = (value - 32) * 5 / 9\n",
+    "        kelvin = celsius + 273.15\n",
+    "        return round(celsius), round(kelvin)\n",
+    "    elif type == \"dist\":\n",
+    "        meters = value * 100\n",
+    "        return meters\n",
+    "    else:\n",
+    "        print(\"Type is not defined\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "convert_to_SI(100)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "convert_to_SI(100, \"dist\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def convert_to_SI2(value, type=\"temp\", measurement=\"celsius\"):\n",
+    "    if type == \"temp\" and measurement == \"celsius\":\n",
+    "        celsius = (value - 32) * 5 / 9\n",
+    "        return round(celsius)\n",
+    "    elif type == \"temp\" and measurement == \"kelvin\":\n",
+    "        celsius = (value - 32) * 5 / 9\n",
+    "        kelvin = celsius + 273.15\n",
+    "        return round(kelvin)\n",
+    "    elif type == \"dist\":\n",
+    "        meters = value * 0.0245\n",
+    "        return meters\n",
+    "    else:\n",
+    "        print(\"Type is not defined\")\n",
+    "        \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "311"
+      ]
+     },
+     "execution_count": 89,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "convert_to_SI2(100, \"temp\", \"kelvin\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "1000\n"
+     ]
+    }
+   ],
+   "source": [
+    "for ZERO in [1,2,3,5,1000]:\n",
+    "    print(ZERO)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 96,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "values_in_fahrenheit = [0, 44, 56, 788]\n",
+    "values_in_celsius = []\n",
+    "values_in_kelvin = []\n",
+    "for value in values_in_fahrenheit:\n",
+    "    cel, kel = convert_to_SI(value)\n",
+    "    values_in_celsius.append(cel)\n",
+    "    values_in_kelvin.append(kel)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[-18, 7, 13, 420]"
+      ]
+     },
+     "execution_count": 100,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "values_in_celsius\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 98,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[255, 280, 286, 693]"
+      ]
+     },
+     "execution_count": 98,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "values_in_kelvin"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(11):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 104,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "range(-10, -100, -30)"
+      ]
+     },
+     "execution_count": 104,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a_range = range(-10, -100, -30)\n",
+    "a_range"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a_list = list(range(21))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a_list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "10\n",
+      "1\n",
+      "10\n",
+      "2\n",
+      "10\n",
+      "3\n",
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(4):\n",
+    "    print(i)\n",
+    "    i = 10\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def progress(percent=0, width=30):\n",
+    "    left = width * percent // 100\n",
+    "    right = width - left\n",
+    "    print(\n",
+    "        \"\\r[\",\n",
+    "        \"#\" * left,\n",
+    "        \" \" * right,\n",
+    "        \"]\",\n",
+    "        f\" {percent:.0f}%\",\n",
+    "        sep=\"\",\n",
+    "        end=\"\",\n",
+    "        flush=True,\n",
+    "    )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[##############################] 100%########                     ] 30%#####################         ] 70%"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(0, 101, 10):\n",
+    "    progress(i)\n",
+    "    sleep(0.1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Celsius: -18, Kelvin 255\n",
+      "Celsius: 7, Kelvin 280\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = {\"-18\": \"255\", \"7\": \"280\"}\n",
+    "for k, v in data.items():\n",
+    "    print(f\"Celsius: {k}, Kelvin {v}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 a\n",
+      "1 b\n",
+      "2 c\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = [\"a\", \"b\", \"c\"]\n",
+    "for i, v in enumerate(a):\n",
+    "    print(i, v)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 a\n",
+      "1 b\n",
+      "2 c\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(len(a)):\n",
+    "    print(i, a[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "index is 0 and character is H\n",
+      "index is 1 and character is A\n",
+      "index is 2 and character is H\n",
+      "index is 3 and character is A\n",
+      "index is 4 and character is H\n",
+      "index is 5 and character is A\n",
+      "index is 6 and character is H\n",
+      "index is 7 and character is A\n"
+     ]
+    }
+   ],
+   "source": [
+    "str = \"HAHAHAHA\"\n",
+    "for idx, ch in enumerate(str):\n",
+    "    print(f\"index is {idx} and character is {ch}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data = [1, 2, 3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "names = [\"A\", \"B\", \"C\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "data 1 belongs to name A\n",
+      "data 2 belongs to name B\n",
+      "data 3 belongs to name C\n"
+     ]
+    }
+   ],
+   "source": [
+    "for idx, ch in enumerate(names):\n",
+    "    print(f\"data {data[idx]} belongs to name {names[idx]}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Temperature in celsius -18 equals 0 in fahrenheit\n",
+      "Temperature in celsius 7 equals 44 in fahrenheit\n",
+      "Temperature in celsius 13 equals 56 in fahrenheit\n",
+      "Temperature in celsius 420 equals 788 in fahrenheit\n"
+     ]
+    }
+   ],
+   "source": [
+    "for q, a in zip(values_in_fahrenheit, values_in_celsius):\n",
+    "    print(f\"Temperature in celsius {a} equals {q} in fahrenheit\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Temperature in celsius 7 equals 0 in fahrenheit\n"
+     ]
+    }
+   ],
+   "source": [
+    "for q, a in zip(values_in_fahrenheit, values_in_celsius[1:2]):\n",
+    "    print(f\"Temperature in celsius {a} equals {q} in fahrenheit\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25\n",
+      "20\n",
+      "15\n",
+      "10\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in reversed(range(5, 30, 5)):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "a, b = 0, 1\n",
+    "while a < 10:\n",
+    "    print(a)\n",
+    "    a, b = b, a + b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "TestList = [1, [79, 77, 78], 0, [2, [45, 65], 55], 4]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 140,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "77"
+      ]
+     },
+     "execution_count": 140,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "TestList[1][1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 142,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.060366167694591355\n",
+      "0.1417662030852913\n",
+      "0.8739662947387468\n",
+      "0.8377271237082763\n",
+      "0.6681574505509433\n",
+      "0.5974772204438443\n",
+      "0.4348388266225741\n",
+      "0.38932566578297123\n",
+      "0.6801877945402879\n",
+      "0.9230177654008287\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 0\n",
+    "while x < 0.9:\n",
+    "    x = random.random()\n",
+    "    print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "n 2\n",
+      "2 is a prime number\n",
+      "n 3\n",
+      "x 2\n",
+      "3 is a prime number\n",
+      "n 4\n",
+      "x 2\n",
+      "4 equals 2 * 2\n",
+      "n 5\n",
+      "x 2\n",
+      "x 3\n",
+      "x 4\n",
+      "5 is a prime number\n",
+      "n 6\n",
+      "x 2\n",
+      "6 equals 2 * 3\n",
+      "n 7\n",
+      "x 2\n",
+      "x 3\n",
+      "x 4\n",
+      "x 5\n",
+      "x 6\n",
+      "7 is a prime number\n",
+      "n 8\n",
+      "x 2\n",
+      "8 equals 2 * 4\n",
+      "n 9\n",
+      "x 2\n",
+      "x 3\n",
+      "9 equals 3 * 3\n"
+     ]
+    }
+   ],
+   "source": [
+    "for n in range(2, 10):\n",
+    "    print(f\"n {n}\", flush=True)\n",
+    "    for x in range(2, n):\n",
+    "        print(f\"x {x}\", flush=True)\n",
+    "        if n % x == 0:\n",
+    "            print(n, \"equals\", x, \"*\", n // x)\n",
+    "            break\n",
+    "    else:  # for loop condition else is evaluated if no break was encountered\n",
+    "        print(n, \"is a prime number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 144,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 144,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "1 & 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 145,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "3 & 9"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 146,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "25"
+      ]
+     },
+     "execution_count": 146,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "25 & 25"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 147,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 147,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "25&100"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "25"
+      ]
+     },
+     "execution_count": 148,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "25&125"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 149,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 149,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "4 & 12"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 150,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "n 2\n",
+      "2 is a prime number\n",
+      "n 3\n",
+      "x 2\n",
+      "3 is a prime number\n",
+      "n 4\n",
+      "x 2\n",
+      "4 equals 2 * 2\n",
+      "n 5\n",
+      "x 2\n",
+      "x 3\n",
+      "x 4\n",
+      "5 is a prime number\n",
+      "n 6\n",
+      "x 2\n",
+      "6 equals 2 * 3\n",
+      "n 7\n",
+      "x 2\n",
+      "x 3\n",
+      "x 4\n",
+      "x 5\n",
+      "x 6\n",
+      "7 is a prime number\n",
+      "n 8\n",
+      "x 2\n",
+      "8 equals 2 * 4\n",
+      "n 9\n",
+      "x 2\n",
+      "x 3\n",
+      "9 equals 3 * 3\n"
+     ]
+    }
+   ],
+   "source": [
+    "for n in range(2, 10):\n",
+    "    print(f\"n {n}\", flush=True)\n",
+    "    for x in range(2, n):\n",
+    "        print(f\"x {x}\", flush=True)\n",
+    "        if n % x == 0:\n",
+    "            print(n, \"equals\", x, \"*\", n // x)\n",
+    "            break\n",
+    "    else:  # for loop condition else is evaluated if no break was encountered\n",
+    "        print(n, \"is a prime number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 151,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "n 2\n",
+      "n 3\n",
+      "n 4\n",
+      "n 5\n",
+      "n 6\n",
+      "n 7\n",
+      "n 8\n",
+      "n 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "for n in range(2, 10):\n",
+    "    print(f\"n {n}\", flush=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "%matplotlib inline\n",
+    "import matplotlib.pyplot as plt\n",
+    "plt.style.use('seaborn-whitegrid')\n",
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 174,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "ph\n",
+      "4\n",
+      "pzd\n",
+      "ph\n",
+      "7\n",
+      "8\n",
+      "ph\n",
+      "pzd\n",
+      "11\n",
+      "ph\n",
+      "13\n",
+      "14\n",
+      "bbd\n",
+      "16\n",
+      "17\n",
+      "ph\n",
+      "19\n",
+      "pzd\n",
+      "ph\n",
+      "22\n",
+      "23\n",
+      "ph\n",
+      "pzd\n",
+      "26\n",
+      "ph\n",
+      "28\n",
+      "29\n",
+      "bbd\n",
+      "31\n",
+      "32\n",
+      "ph\n",
+      "34\n",
+      "pzd\n",
+      "ph\n",
+      "37\n",
+      "38\n",
+      "ph\n",
+      "pzd\n",
+      "41\n",
+      "ph\n",
+      "43\n",
+      "44\n",
+      "bbd\n",
+      "46\n",
+      "47\n",
+      "ph\n",
+      "49\n",
+      "pzd\n",
+      "ph\n",
+      "52\n",
+      "53\n",
+      "ph\n",
+      "pzd\n",
+      "56\n",
+      "ph\n",
+      "58\n",
+      "59\n",
+      "bbd\n",
+      "61\n",
+      "62\n",
+      "ph\n",
+      "64\n",
+      "pzd\n",
+      "ph\n",
+      "67\n",
+      "68\n",
+      "ph\n",
+      "pzd\n",
+      "71\n",
+      "ph\n",
+      "73\n",
+      "74\n",
+      "bbd\n",
+      "76\n",
+      "77\n",
+      "ph\n",
+      "79\n",
+      "pzd\n",
+      "ph\n",
+      "82\n",
+      "83\n",
+      "ph\n",
+      "pzd\n",
+      "86\n",
+      "ph\n",
+      "88\n",
+      "89\n",
+      "bbd\n",
+      "91\n",
+      "92\n",
+      "ph\n",
+      "94\n",
+      "pzd\n",
+      "ph\n",
+      "97\n",
+      "98\n",
+      "ph\n",
+      "pzd\n"
+     ]
+    }
+   ],
+   "source": [
+    "for number in range(1, 101):\n",
+    "    if number % 3 == 0 and number % 5 == 0:\n",
+    "        print(\"bbd\")\n",
+    "    elif number % 3 ==0:\n",
+    "        print(\"ph\")\n",
+    "    elif number % 5 == 0:\n",
+    "        print(\"pzd\")\n",
+    "    else:\n",
+    "        print (number)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 156,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "listA = [1,2,3,4,5,6]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 158,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "listA.append(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 159,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 6, 10]"
+      ]
+     },
+     "execution_count": 159,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "listA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 163,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "listA.reverse()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 164,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 6, 5, 4, 3, 2, 1]"
+      ]
+     },
+     "execution_count": 164,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "listA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 177,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
