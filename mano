@@ -1,33 +1,12 @@
 {
  "cells": [
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": null,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "# Lab work 2020-02-20"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "[Best up-to-date python tutorial](https://docs.python.org/3.7/tutorial/index.html)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Packages\n",
-    "\n",
-    "When starting python document importing of packages usually go first. These packages extend programs with previous work done by us or somebody else."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "For example here we import math package. It has a lot of functions helping with variuos math problems. For example the definition of pi can be accessed by executing `math.pi`"
+    "Fahrenheit = (100 * 9/5) + 32"
    ]
   },
   {
@@ -36,415 +15,82 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "import math"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Calculator\n",
-    "Lets use python as a calculator and do some basic math:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "2+2"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "math.sqrt(4)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "3**2"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "6/2"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> In python REPL (REPL is the language shell, the Python Interactive Shell. The REPL acronym is short for Read, Eval, Print and Loop) write `math.` and then press `TAB`. Pressing tab in ipython will reveal implemented functions in math package. Explore them, try to implement basic math operators (Find sin, cos, log, exponentof number 42).\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## IPython"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "IPython gives many useful functions to basic python REPL.\n",
-    "Very important addition is easy access of functions documentation with `?`. Try to access documentation of basic math functions."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "math.sin?"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Full documentation can be accessed with help"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "help(math)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Ability to run bash commands and quickly explore the contents of the current directory is very handy during data analysis\n",
-    "Just like in bash we can get current directory with:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "pwd"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The contents of current directory with:"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "ls -a"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "and so on..."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Other useful addition is workspace control. We always can get the previous outputs and inputs by their name."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "In[-9]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "As you can see to get the output of the output or input number X one could write In[X] or Out[X]. But it is possible to go from the last elements and reverse the numbering --- last element is Out[-1] second before last Out[-2] and so on"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " If one would like to get first three Inputs:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "In[1:5]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The colon operator slices from number x to y in this case from 1 to 5.\n",
-    " \n",
-    "Remember that python counts from 0 so the first element is at 0"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " These shortcuts can lead to faster and smoother data exploration"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "---\n",
-    ">> **Task**\n",
-    ">>\n",
-    ">> - Test IPython magical functions. `%lsmagic`, `%magic` and `alias`\n",
-    ">>    - Find out the directory you are in.\n",
-    ">>    - Navigate to ~/Documents/bioa/ directory.\n",
-    ">>\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " When writing code it is important to write comments to make it easier for you (in a week) or other persons to read and understand it. Comments  in python are written after a hash tag # and they are ignored by python interpreter. When writing in JupyterLab notebook it is better to make comments in markdown cells."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# python will ignore this\n",
-    "# pwd"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Data types"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Lets make a Celsius to Fahrenheit converter. The basic formula for conversion is y = (x × 9/5) + 32\n",
-    "\n",
-    "where y is temperature in Fahrenheit and x temperature in Celsius.\n",
-    "\n",
-    "Lets find out what is in the temperature in Fahrenheit when temperature in Celsius is 100C.\n",
-    "\n",
-    "First we could simply write out the formula like that:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": [
-    "(100 * 9/5) + 32"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "For later use we could create a variable in memory that would store the result:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "Fahrenheit = (100 * 9/5) + 32\n",
     "Fahrenheit"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Now variable Fahrenheit stores the results of that operation.\n",
-    "\n",
-    "There are a couple variable types in python for number storage. The simplest `int` (Integer) represents real integer numbers.\n",
-    "\n",
-    "Our created variable Fahrenheit is a `float` -- it has higher precision then `int` but for that it occupies more space in memory. We can find out the type of the variable by writing"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 11,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "type(Fahrenheit)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "We can also change the type by casting it to other type"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "int(Fahrenheit)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "Take note that Fahrenheit  variable was not changed you have to assign the output of the operation to change it"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "Fahrenheit = int(Fahrenheit)\n",
-    "Fahrenheit"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "There are 5 core variable types"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Integer"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "10"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Float"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "3.14"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "it is possible to use scientific notation with floats"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "4e2"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Boolean - True and False or 1 and 0"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "jupyter": {
-     "source_hidden": true
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "\u001b[1;31mDocstring:\u001b[0m\n",
+       "Resets the namespace by removing all names defined by the user, if\n",
+       "called without arguments, or by removing some types of objects, such\n",
+       "as everything currently in IPython's In[] and Out[] containers (see\n",
+       "the parameters for details).\n",
+       "\n",
+       "Parameters\n",
+       "----------\n",
+       "-f : force reset without asking for confirmation.\n",
+       "\n",
+       "-s : 'Soft' reset: Only clears your namespace, leaving history intact.\n",
+       "    References to objects may be kept. By default (without this option),\n",
+       "    we do a 'hard' reset, giving you a new session and removing all\n",
+       "    references to objects from the current session.\n",
+       "\n",
+       "in : reset input history\n",
+       "\n",
+       "out : reset output history\n",
+       "\n",
+       "dhist : reset directory history\n",
+       "\n",
+       "array : reset only variables that are NumPy arrays\n",
+       "\n",
+       "See Also\n",
+       "--------\n",
+       "reset_selective : invoked as ``%reset_selective``\n",
+       "\n",
+       "Examples\n",
+       "--------\n",
+       "::\n",
+       "\n",
+       "  In [6]: a = 1\n",
+       "\n",
+       "  In [7]: a\n",
+       "  Out[7]: 1\n",
+       "\n",
+       "  In [8]: 'a' in get_ipython().user_ns\n",
+       "  Out[8]: True\n",
+       "\n",
+       "  In [9]: %reset -f\n",
+       "\n",
+       "  In [1]: 'a' in get_ipython().user_ns\n",
+       "  Out[1]: False\n",
+       "\n",
+       "  In [2]: %reset -f in\n",
+       "  Flushing input history\n",
+       "\n",
+       "  In [3]: %reset -f dhist in\n",
+       "  Flushing directory history\n",
+       "  Flushing input history\n",
+       "\n",
+       "Notes\n",
+       "-----\n",
+       "Calling this magic from clients that do not implement standard input,\n",
+       "such as the ipython notebook interface, will reset the namespace\n",
+       "without confirmation.\n",
+       "\u001b[1;31mFile:\u001b[0m      c:\\programdata\\anaconda3\\lib\\site-packages\\ipython\\core\\magics\\namespace.py\n"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
     }
-   },
-   "outputs": [],
+   ],
    "source": [
-    "type(True)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Complex"
+    "reset?"
    ]
   },
   {
@@ -453,14 +99,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "type(3 + 4j)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "String"
+    "reset -f"
    ]
   },
   {
@@ -469,22 +108,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "message = 'Hello world'\n",
-    "message"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " And 4 compound types for multiple variable storage"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "List"
+    "Fahrenheit"
    ]
   },
   {
@@ -493,14 +117,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "[1,2,3]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Tuple"
+    "Fahrenheit = 100"
    ]
   },
   {
@@ -509,14 +126,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "(1,2)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Set"
+    "Fahrenheit"
    ]
   },
   {
@@ -525,14 +135,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "{1,2}"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Dictionary"
+    "reset -f"
    ]
   },
   {
@@ -541,339 +144,501 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "{'key':'value'}"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " We will explore them in more detail later"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "In IPython we can get all objects in current workspace by typing:"
+    "Fahrenheit"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 12,
    "metadata": {},
    "outputs": [],
    "source": [
-    "who"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "We can clear all variables in workspace with `reset`"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Explore the documentation of reset and find a way to clear only one variable. Clear Fahrenheit but keep the rest.\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Functions"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "If we want to use the same formula more then once it is wise to create a shortcut. It can be done by creating functions."
+    "a = 8 "
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "execution_count": 13,
+   "metadata": {},
    "outputs": [],
    "source": [
-    "def celsius_to_farenheit(celsius):\n",
+    "b = 10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Once deleted, variables cannot be recovered. Proceed (y/[n])?   y\n"
+     ]
+    }
+   ],
+   "source": [
+    "reset_selective invoked as \"a =8\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def celsius_to_fahrenheit(celsius):\n",
     "    fahrenheit = (celsius * 9/5) + 32\n",
     "    return round(fahrenheit)"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "50"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "Here we created a function that will convert temperature given in Celsius to Fahrenheit. In addition it will round the value with the built-in python method `round`.\n",
-    "\n",
-    "Functions are defined with keyword `def` and have a basic form:"
+    "celsius_to_fahrenheit(10)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 25,
    "metadata": {},
    "outputs": [],
    "source": [
-    "def functionName(inputVariable):\n",
-    "    #  somethingis done here\n",
-    "    return something"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Remember python is sensitive to indentation!"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "Now if we want to get the temperature in Fahrenheit of 100 Celsius we simply write"
+    "def M_to_Cm(M):\n",
+    "    Cm = M/0.01\n",
+    "    return round(Cm)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 28,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5000"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "celsius_to_farenheit(100)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Lets say we want to calculate temperature for 100 110 and 200 Celsius and store it in one variable. For this task we have lists. Lists are created with square brackets [] and can have mixed type inputs inside. Lists are mutable (it is possible to change them) and ordered (the order items are added is important)"
+    "M_to_Cm(50)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 29,
    "metadata": {},
    "outputs": [],
    "source": [
-    "ListA = [celsius_to_farenheit(100), celsius_to_farenheit(110), celsius_to_farenheit(200)]\n",
+    "ListA = [M_to_Cm(5), M_to_Cm(3), M_to_Cm(10)]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[500, 300, 1000]"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To get the size of the list:"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "len(ListA)"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 32,
    "metadata": {},
+   "outputs": [],
    "source": [
-    " Lists are one of the most useful storages in python. They have many methods to work with. You can get all methods by pressing TAB in ipython after writing variable name and a dot ."
+    "ListA.append(5)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 33,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[500, 300, 1000, 5]"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### The methods:"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Append - adds element to list"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "ListA.append(2)\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 34,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "To sort elements in the list"
+    "ListA.sort()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 35,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 300, 500, 1000]"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.sort()\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 36,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "Extend -- appends iterable elements (for now think of them as lists and specific iterable functions)"
+    "ListA.extend([1,2,3])"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 37,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 300, 500, 1000, 1, 2, 3]"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.extend([1, 2, 3])\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 38,
    "metadata": {},
+   "outputs": [],
    "source": [
-    " If we append the list [10,11,12], the whole list is added to the end while with extend we iterate over the list and add elements by one"
+    "ListA.append([10,11,12])"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 300, 500, 1000, 1, 2, 3, [10, 11, 12]]"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.append([10, 11, 12])\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "count returns number of occurrences of given value in the list"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 40,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 40,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListA.count(2)"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To insert object (number 2) before index 1"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 41,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 300, 500, 1000, 1, 2, 3, [10, 11, 12]]"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.insert(1, 2)\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 42,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "to reverse value order in the list"
+    "ListA.insert(1,2)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 43,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 2, 300, 500, 1000, 1, 2, 3, [10, 11, 12]]"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.reverse()\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 44,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "Pop removes and returns an item from the list at given index (default = last)"
+    "ListA.insert(3,525)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 45,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[5, 2, 300, 525, 500, 1000, 1, 2, 3, [10, 11, 12]]"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.pop(2)\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 46,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "After pop displays/returns the number it is removed from the list"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Copy - returns a shallow copy of the list."
+    "ListA.reverse()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 2, 1, 1000, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 48,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA.pop(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 1, 1000, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1000"
+      ]
+     },
+     "execution_count": 52,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA.pop(3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 1, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -882,258 +647,494 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 55,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "ListA.append(2)\n",
-    "ListA"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 1, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 55,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListB"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 56,
    "metadata": {},
+   "outputs": [],
    "source": [
-    " If we simply create copy by assignment"
+    "ListA.append(2)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 57,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 1, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListC = ListA\n",
-    "ListC"
+    "ListB"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 58,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.append(88)\n",
+    "ListA.pop(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 525, 300, 2, 5, 2]"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
     "ListA"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 60,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "525"
+      ]
+     },
+     "execution_count": 60,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA.pop(3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 300, 2, 5, 2]"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
    "metadata": {},
    "outputs": [],
+   "source": [
+    "ListC = ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 300, 2, 5, 2]"
+      ]
+     },
+     "execution_count": 63,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListC"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 64,
    "metadata": {},
+   "outputs": [],
    "source": [
-    " we observe that both ListA and ListC changes as ListC is not a separate copy but just a pointer"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Index -- returns first index of the given value"
+    "ListA.append(30)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 65,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 300, 2, 5, 2, 30]"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 300, 2, 5, 2, 30]"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListC"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 67,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListA.index(3)"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 68,
    "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'list' object has no attribute 'revome'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-68-22229837b375>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[0mListA\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mrevome\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;36m30\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m: 'list' object has no attribute 'revome'"
+     ]
+    }
+   ],
    "source": [
-    "Remove -- removes first occurrence of the value"
+    "ListA.revome(30)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 69,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 500, 300, 2, 5, 2, 30]"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.remove(88)\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 70,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "clear - clears all items from list"
+    "ListA.remove(3)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
+   "execution_count": 71,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 500, 300, 2, 5, 2, 30]"
+      ]
+     },
+     "execution_count": 71,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListA.clear()\n",
     "ListA"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 72,
    "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'ListAclear' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-72-bf9dd035fbe9>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[0mListAclear\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m: name 'ListAclear' is not defined"
+     ]
+    }
+   ],
    "source": [
-    " You can get elements in the list by their index"
+    "ListAclear()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 73,
    "metadata": {},
    "outputs": [],
    "source": [
-    "ListB[0]"
+    "ListA.clear()"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 74,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[]"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "500"
+      ]
+     },
+     "execution_count": 75,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListB[3]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 77,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12],\n",
+       " 3,\n",
+       " 1,\n",
+       " 500,\n",
+       " 525,\n",
+       " 300,\n",
+       " 2,\n",
+       " 5,\n",
+       " [10, 11, 12],\n",
+       " 3,\n",
+       " 1,\n",
+       " 500,\n",
+       " 525,\n",
+       " 300,\n",
+       " 2,\n",
+       " 5]"
+      ]
+     },
+     "execution_count": 77,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListB[-1]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Or by slicing the indexes"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "ListB[0:2]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Lists implement some math operators like:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "ListB * 2"
+    "ListB*2"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 78,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12],\n",
+       " 3,\n",
+       " 1,\n",
+       " 500,\n",
+       " 525,\n",
+       " 300,\n",
+       " 2,\n",
+       " 5,\n",
+       " [10, 11, 12],\n",
+       " 3,\n",
+       " 1,\n",
+       " 500,\n",
+       " 525,\n",
+       " 300,\n",
+       " 2,\n",
+       " 5]"
+      ]
+     },
+     "execution_count": 78,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "ListB + ListB"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Lists can have lists inside lists (nested lists)"
+    "ListB+ListB"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 79,
    "metadata": {},
    "outputs": [],
    "source": [
-    "ListC = [ListB, ListB]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To access first list in ListB:"
+    "ListC = (ListB, ListB)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 80,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "([[10, 11, 12], 3, 1, 500, 525, 300, 2, 5],\n",
+       " [[10, 11, 12], 3, 1, 500, 525, 300, 2, 5])"
+      ]
+     },
+     "execution_count": 80,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "ListC"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[[10, 11, 12], 3, 1, 500, 525, 300, 2, 5]"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "ListC[0]"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To access second item in first list in ListB:"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": [
-    "ListC[0][1]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Get numbers 78, 55, 0, 45 from the list `TestList`\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 85,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1142,39 +1143,47 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 98,
    "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[2, [45, 65], 55]"
+      ]
+     },
+     "execution_count": 98,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "Now lets change our function so it would return back Fahrenheit and Kelvin values"
+    "TestList[3]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 100,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "45"
+      ]
+     },
+     "execution_count": 100,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "TestList[3][1][0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1186,100 +1195,147 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 102,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(108, -231)"
+      ]
+     },
+     "execution_count": 102,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "output = celsius_to_farenheit(42)\n",
     "output"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Variable `output` is called tuple. It is immutable"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 103,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object does not support item assignment",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-103-b1c9edecb5fb>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[0moutput\u001b[0m\u001b[1;33m[\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m]\u001b[0m \u001b[1;33m=\u001b[0m \u001b[1;36m3\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+     ]
+    }
+   ],
    "source": [
     "output[1] = 3"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 104,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "The most useful tuple property for us right now will be unpacking"
+    "fah, kel = output"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 105,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "-231"
+      ]
+     },
+     "execution_count": 105,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "fah, kel = output\n",
     "kel"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
+   "execution_count": 106,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "108"
+      ]
+     },
+     "execution_count": 106,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "fah"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " we could do the unpacking at the moment of function execution"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "execution_count": 111,
+   "metadata": {},
    "outputs": [],
    "source": [
-    "fah, kel = celsius_to_farenheit(42)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Tuples work faster then lists, are immutable (you can not accidentally change the value) and are often used to form dictionaries"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To store all the information in a more organized way we can use a dictionary"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Dictionary is defined by key and value pair `{key: value}`. Keys must be unique and immutable (tuple, integer, string float, boolean). Values in the dictionary are accessed by the unique key. Values are not restricted."
+    "fah, kel = celsius_to_farenheit(1000)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1832"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fah"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "727"
+      ]
+     },
+     "execution_count": 113,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "kel"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1291,7 +1347,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 117,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1302,7 +1358,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 118,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1313,89 +1369,140 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 119,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{34: (93, -239), 4: (39, -269), -9: (16, -282)}"
+      ]
+     },
+     "execution_count": 119,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "temperature"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 120,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(39, -269)"
+      ]
+     },
+     "execution_count": 120,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "temperature[4]"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " To get all the items in the dictionary use items method"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 121,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([(34, (93, -239)), (4, (39, -269)), (-9, (16, -282))])"
+      ]
+     },
+     "execution_count": 121,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "temperature.items()"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To get the keys"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 122,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys([34, 4, -9])"
+      ]
+     },
+     "execution_count": 122,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "temperature.keys()"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Values given the key can be accessed with get method"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 123,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(39, -269)"
+      ]
+     },
+     "execution_count": 123,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "temperature.get(4)"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 124,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(16, -282)"
+      ]
+     },
+     "execution_count": 124,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    " There are many ways to create dictionaries:"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "using curly brackets"
+    "temperature.get(-9)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 125,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['key1', 'key2'])"
+      ]
+     },
+     "execution_count": 125,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "dictA = {'key1':'value1','key2':'value2'}\n",
     "dictA.keys()"
@@ -1403,61 +1510,28 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 126,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "dictA['key1']"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "using dict keyward"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'key1': 'value1', 'key2': 'value2'}"
+      ]
+     },
+     "execution_count": 126,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "dictA = dict(key1 = 'value1', key2='value2')\n",
     "dictA"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "using lists of tuples"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": [
-    "dictA = dict([('key1','value1'),('key2','value2')])\n",
-    "dictA"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " The last type is SET. It is a mutable collection of unique unordered values.\n",
-    " \n",
-    "Using sets we can perform variuos logical operations. For example if we have a list of numbers"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 127,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1465,34 +1539,57 @@
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 128,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 1, 1, 2, 3, 5, 5]"
+      ]
+     },
+     "execution_count": 128,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "converting it to set will leave only unique values"
+    "s"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "execution_count": 129,
+   "metadata": {},
    "outputs": [],
    "source": [
-    "ss = set(s)\n",
+    "ss = set(s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 5}"
+      ]
+     },
+     "execution_count": 130,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
     "ss"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The methods of sets:"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 131,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1501,111 +1598,290 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 132,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 4, 5, 6}"
+      ]
+     },
+     "execution_count": 132,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "rr.difference(ss)  # difference between sets"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "rr.intersection(ss)  # returns common elements"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "rr.issubset(ss)  # checks if one set is a subset of other"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "rr.union(ss)  # unites both sets"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "rr.add('k')  # adds elements\n",
     "rr"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 133,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{4, 6}"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "rr.clear()  # removes all elements\n",
-    "rr"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "check set help for more methods"
+    "rr.difference(ss)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
+   "execution_count": 134,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5, 6}"
+      ]
+     },
+     "execution_count": 134,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "rr.union(ss)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "metadata": {},
    "outputs": [],
+   "source": [
+    "rr.add('k')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{2, 4, 5, 6, 'k'}"
+      ]
+     },
+     "execution_count": 136,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "rr"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Help on class set in module builtins:\n",
+      "\n",
+      "class set(object)\n",
+      " |  set() -> new empty set object\n",
+      " |  set(iterable) -> new set object\n",
+      " |  \n",
+      " |  Build an unordered collection of unique elements.\n",
+      " |  \n",
+      " |  Methods defined here:\n",
+      " |  \n",
+      " |  __and__(self, value, /)\n",
+      " |      Return self&value.\n",
+      " |  \n",
+      " |  __contains__(...)\n",
+      " |      x.__contains__(y) <==> y in x.\n",
+      " |  \n",
+      " |  __eq__(self, value, /)\n",
+      " |      Return self==value.\n",
+      " |  \n",
+      " |  __ge__(self, value, /)\n",
+      " |      Return self>=value.\n",
+      " |  \n",
+      " |  __getattribute__(self, name, /)\n",
+      " |      Return getattr(self, name).\n",
+      " |  \n",
+      " |  __gt__(self, value, /)\n",
+      " |      Return self>value.\n",
+      " |  \n",
+      " |  __iand__(self, value, /)\n",
+      " |      Return self&=value.\n",
+      " |  \n",
+      " |  __init__(self, /, *args, **kwargs)\n",
+      " |      Initialize self.  See help(type(self)) for accurate signature.\n",
+      " |  \n",
+      " |  __ior__(self, value, /)\n",
+      " |      Return self|=value.\n",
+      " |  \n",
+      " |  __isub__(self, value, /)\n",
+      " |      Return self-=value.\n",
+      " |  \n",
+      " |  __iter__(self, /)\n",
+      " |      Implement iter(self).\n",
+      " |  \n",
+      " |  __ixor__(self, value, /)\n",
+      " |      Return self^=value.\n",
+      " |  \n",
+      " |  __le__(self, value, /)\n",
+      " |      Return self<=value.\n",
+      " |  \n",
+      " |  __len__(self, /)\n",
+      " |      Return len(self).\n",
+      " |  \n",
+      " |  __lt__(self, value, /)\n",
+      " |      Return self<value.\n",
+      " |  \n",
+      " |  __ne__(self, value, /)\n",
+      " |      Return self!=value.\n",
+      " |  \n",
+      " |  __or__(self, value, /)\n",
+      " |      Return self|value.\n",
+      " |  \n",
+      " |  __rand__(self, value, /)\n",
+      " |      Return value&self.\n",
+      " |  \n",
+      " |  __reduce__(...)\n",
+      " |      Return state information for pickling.\n",
+      " |  \n",
+      " |  __repr__(self, /)\n",
+      " |      Return repr(self).\n",
+      " |  \n",
+      " |  __ror__(self, value, /)\n",
+      " |      Return value|self.\n",
+      " |  \n",
+      " |  __rsub__(self, value, /)\n",
+      " |      Return value-self.\n",
+      " |  \n",
+      " |  __rxor__(self, value, /)\n",
+      " |      Return value^self.\n",
+      " |  \n",
+      " |  __sizeof__(...)\n",
+      " |      S.__sizeof__() -> size of S in memory, in bytes\n",
+      " |  \n",
+      " |  __sub__(self, value, /)\n",
+      " |      Return self-value.\n",
+      " |  \n",
+      " |  __xor__(self, value, /)\n",
+      " |      Return self^value.\n",
+      " |  \n",
+      " |  add(...)\n",
+      " |      Add an element to a set.\n",
+      " |      \n",
+      " |      This has no effect if the element is already present.\n",
+      " |  \n",
+      " |  clear(...)\n",
+      " |      Remove all elements from this set.\n",
+      " |  \n",
+      " |  copy(...)\n",
+      " |      Return a shallow copy of a set.\n",
+      " |  \n",
+      " |  difference(...)\n",
+      " |      Return the difference of two or more sets as a new set.\n",
+      " |      \n",
+      " |      (i.e. all elements that are in this set but not the others.)\n",
+      " |  \n",
+      " |  difference_update(...)\n",
+      " |      Remove all elements of another set from this set.\n",
+      " |  \n",
+      " |  discard(...)\n",
+      " |      Remove an element from a set if it is a member.\n",
+      " |      \n",
+      " |      If the element is not a member, do nothing.\n",
+      " |  \n",
+      " |  intersection(...)\n",
+      " |      Return the intersection of two sets as a new set.\n",
+      " |      \n",
+      " |      (i.e. all elements that are in both sets.)\n",
+      " |  \n",
+      " |  intersection_update(...)\n",
+      " |      Update a set with the intersection of itself and another.\n",
+      " |  \n",
+      " |  isdisjoint(...)\n",
+      " |      Return True if two sets have a null intersection.\n",
+      " |  \n",
+      " |  issubset(...)\n",
+      " |      Report whether another set contains this set.\n",
+      " |  \n",
+      " |  issuperset(...)\n",
+      " |      Report whether this set contains another set.\n",
+      " |  \n",
+      " |  pop(...)\n",
+      " |      Remove and return an arbitrary set element.\n",
+      " |      Raises KeyError if the set is empty.\n",
+      " |  \n",
+      " |  remove(...)\n",
+      " |      Remove an element from a set; it must be a member.\n",
+      " |      \n",
+      " |      If the element is not a member, raise a KeyError.\n",
+      " |  \n",
+      " |  symmetric_difference(...)\n",
+      " |      Return the symmetric difference of two sets as a new set.\n",
+      " |      \n",
+      " |      (i.e. all elements that are in exactly one of the sets.)\n",
+      " |  \n",
+      " |  symmetric_difference_update(...)\n",
+      " |      Update a set with the symmetric difference of itself and another.\n",
+      " |  \n",
+      " |  union(...)\n",
+      " |      Return the union of sets as a new set.\n",
+      " |      \n",
+      " |      (i.e. all elements that are in either set.)\n",
+      " |  \n",
+      " |  update(...)\n",
+      " |      Update a set with the union of itself and others.\n",
+      " |  \n",
+      " |  ----------------------------------------------------------------------\n",
+      " |  Static methods defined here:\n",
+      " |  \n",
+      " |  __new__(*args, **kwargs) from builtins.type\n",
+      " |      Create and return a new object.  See help(type) for accurate signature.\n",
+      " |  \n",
+      " |  ----------------------------------------------------------------------\n",
+      " |  Data and other attributes defined here:\n",
+      " |  \n",
+      " |  __hash__ = None\n",
+      "\n"
+     ]
+    }
+   ],
    "source": [
     "help(set)"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Explore dictionary, set and tuple methods\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Printing"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " Finally we want to display the temperature values with some text explaining them. Variable storing text in python is called a string. Strings are defined inside quotation marks."
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 138,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is string A'"
+      ]
+     },
+     "execution_count": 138,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "stringA = \"This is string A\"\n",
     "stringA"
@@ -1613,83 +1889,111 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 139,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "stringB = 'This is string B'\n",
-    "stringB"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Like lists strings have methods and operations. But stings are immutable and every time we do something with them new objects are created in memory."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "To change all letters to lower case use:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'this is string a'"
+      ]
+     },
+     "execution_count": 139,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "stringA.lower()"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "to change all letters to uppercase"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 140,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'THIS IS STRING A'"
+      ]
+     },
+     "execution_count": 140,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "stringA.upper()"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 142,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "+ and * combines strings"
+    "stringB = \"WTF\""
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 143,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is string AWTF'"
+      ]
+     },
+     "execution_count": 143,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "stringA + stringB"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 144,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is string AThis is string A'"
+      ]
+     },
+     "execution_count": 144,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "stringA * 2"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 145,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'This is string AWTF'"
+      ]
+     },
+     "execution_count": 145,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "But it is better to use join method. It accepts a list of strings and joins them with a separator. In this case we give empty space as a separator ' '."
+    "''.join([stringA, stringB])"
    ]
   },
   {
@@ -1697,189 +2001,169 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": [
-    "' '.join([stringA, stringB])"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Split strings into parts with split method"
-   ]
+   "source": []
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 147,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "stringA.split()"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Explore string methods\n",
-    ">> [full list of methods](https://docs.python.org/3.7/library/stdtypes.html#string-methods)\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Printing"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Built in function `print` formats strings and other variables into text and displays it"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "This is string A\n"
+     ]
+    }
+   ],
    "source": [
     "print(stringA)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 148,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "This is string A WTF\n"
+     ]
+    }
+   ],
    "source": [
     "print(stringA, stringB)"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 149,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Celsius, -9. Fahrenheit 16.'"
+      ]
+     },
+     "execution_count": 149,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
-    "Old way to perform string formatting:"
+    "\"Celsius, %s. Fahrenheit %s.\" % (cel, fah)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 150,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "\"Celsius, %s. Fahrenheit %s.\" % (cel, fah)  # % operator"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "\"Celsius, {0}. Fahrenheit{1}.\".format(cel, fah)  # str.format method"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "It is possible to combine everything with print"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Temperature in Celsius -9 Fahrenheit  16\n"
+     ]
+    }
+   ],
    "source": [
     "print('Temperature in Celsius', cel, 'Fahrenheit ', fah, sep=' ', end='\\n', flush=False)"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "From version 3.6  python supports the fString and rString strings which are easiest to use."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " fStrings replaces curly brackets into variable values:"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 151,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Temperature in Celsius -9'"
+      ]
+     },
+     "execution_count": 151,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "f'Temperature in Celsius {cel}'"
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 152,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "rString prints everything ignoring the special characters"
+    "cel = 90"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 153,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Temperature in Celsius 90'"
+      ]
+     },
+     "execution_count": 153,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "f'Temperature in Celsius {cel}'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 154,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Temperature in Celsius {cel}'"
+      ]
+     },
+     "execution_count": 154,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "r'Temperature in Celsius {cel}'"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " For all types of formating these special characters can help to present text:\n",
-    "\n",
-    "|special char|displayed|\n",
-    "|-----------|----------|\n",
-    "|\\t|tab|\n",
-    "|\\n|new line|\n",
-    "|\\r|Enter, return|\n",
-    "|\\b|back|\n",
-    "|\\\\|backslash \\|\n",
-    "|\\'|quotation mark|\n",
-    "|\\\"|double quotation mark|"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 155,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Temperature\n",
+      "Celsius 90\t Fahrenheit 16\n"
+     ]
+    }
+   ],
    "source": [
     "print(f'Temperature\\nCelsius {cel}\\t Fahrenheit {fah}')"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 156,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1894,80 +2178,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 161,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[############################# ] 99%#####                         ] 17%#####                         ] 19%########                      ] 27%##########                    ] 34%##########                    ] 36%############                  ] 43%################              ] 55%########################      ] 83%##########################    ] 87%###########################   ] 90%###########################   ] 92%############################  ] 94%##############################] 100%"
+     ]
+    }
+   ],
    "source": [
-    "# we will learn flow control next time\n",
-    "for i in range(101):\n",
+    "for i in range(0, 101, 1):\n",
     "    progress(i)\n",
     "    sleep(0.1)"
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Change progress function to get the display shown below\n",
-    ">>\n",
-    "---"
-   ]
-  },
-  {
-   "cell_type": "raw",
-   "metadata": {
-    "lines_to_next_cell": 0
-   },
-   "source": [
-    "[  # ] 5%\n",
-    "[  # ] 6%\n",
-    "[  # ] 7%\n",
-    "[  # ] 8%\n",
-    "[  # ] 9%\n",
-    "[  # ] 10%\n",
-    "[  # ] 11%\n",
-    "[  # ] 12%"
-   ]
-  },
-  {
    "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "lines_to_next_cell": 2
-   },
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Plotting"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Finally we need some basic plotting to plot the values we will get. Python has a lot of libraries for this purpose and we will learn the most important ones step by step.\n",
-    "For now we will use the core library matplotlib"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    " First we have to import it"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 162,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1975,19 +2205,62 @@
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 163,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<Figure size 1440x216 with 0 Axes>"
+      ]
+     },
+     "execution_count": 163,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "<Figure size 1440x216 with 0 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
-    "Then we create a figure <plt.figure>,\n",
-    "add plots <plot(x,y)>,\n",
-    "and labels"
+    "plt.figure(figsize=(20,3))"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 176,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Text(0.5, 0, 'Measurements')"
+      ]
+     },
+     "execution_count": 176,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<Figure size 1440x216 with 1 Axes>"
+      ]
+     },
+     "metadata": {
+      "needs_background": "light"
+     },
+     "output_type": "display_data"
+    }
+   ],
    "source": [
     "plt.figure(figsize=(20,3)) # creates figure of preferred size\n",
     "plt.plot(list(temperature.keys()),'r+') # convert keys to list and plot in red color as + signs\n",
@@ -1999,15 +2272,64 @@
    ]
   },
   {
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 178,
    "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<Figure size 360x360 with 0 Axes>"
+      ]
+     },
+     "execution_count": 178,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "<Figure size 360x360 with 0 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
-    "---\n",
-    ">> **TASK**\n",
-    ">>\n",
-    ">> - Make a plot of a list [1,2,3,4]\n",
-    ">>\n",
-    "---"
+    "plt.figure(figsize=(5,5))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 179,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[<matplotlib.lines.Line2D at 0x1ab91a56e88>]"
+      ]
+     },
+     "execution_count": 179,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<Figure size 432x288 with 1 Axes>"
+      ]
+     },
+     "metadata": {
+      "needs_background": "light"
+     },
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.plot(list(temperature.keys()),'r+')"
    ]
   },
   {
@@ -2019,12 +2341,6 @@
   }
  ],
  "metadata": {
-  "jupytext": {
-   "cell_markers": "{{{,}}}",
-   "cell_metadata_filter": "-all",
-   "encoding": "# -*- coding: utf-8 -*-",
-   "formats": "ipynb,py"
-  },
   "kernelspec": {
    "display_name": "Python 3",
    "language": "python",
